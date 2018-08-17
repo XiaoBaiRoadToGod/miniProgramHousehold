@@ -13,18 +13,6 @@
         <card :text="motto"></card>
       </div>
     </div>
-
-    <form class="form-container">
-      <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
-    </form>
-    <section class='content' >
-      <!-- <span class='float' > -->
-        <button>按钮</button>
-      <!-- </span> -->
-        
-      <div>哈哈</div>
-    </section>
   </div>
 </template>
 
@@ -58,16 +46,16 @@ export default {
       console.log('getUserInfo')
       // 调用登录接口
       let _this = this 
-      wx.login({
-        success: () => {
-          wx.getUserInfo({
-            success: (res) => {
-              console.log(res)
-              _this.userInfo = res.userInfo
-            }
-          })
-        }
-      })
+      // wx.login({
+      //   success: () => {
+      //     wx.getUserInfo({
+      //       success: (res) => {
+      //         console.log(res)
+      //         _this.userInfo = res.userInfo
+      //       }
+      //     })
+      //   }
+      // })
     },
     clickHandle (msg, ev) {
       console.log('clickHandle:', msg, ev)
